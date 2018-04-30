@@ -6,7 +6,7 @@ class Pokemon
     @type = type
     @db = db
   end
-  def self.save(name, type, db, id=nil)
-    db.execute("INSERT INTO pokemon (name")
+  def self.all
+    @@all
   end
 end
