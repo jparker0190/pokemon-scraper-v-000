@@ -9,7 +9,12 @@ class Pokemon
   end
   def save
     sql = <<-SQL 
-    INSERT INTO pokemon (name, type, id) VALUES (?,?,?)
-    SQL 
-  END
+    INSERT INTO pokemon (name, type) VALUES (?,?)
+    SQL
+  end
+  def self.create(name:, type:)
+    song = Song.new(name, type)
+    song.save
+    song
+  end
 end
