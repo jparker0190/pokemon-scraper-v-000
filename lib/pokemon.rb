@@ -9,5 +9,5 @@ class Pokemon
   end
   def save
     sql = <<- SQL INSERT INTO pokemon (name, type, id) VALUES (?,?,?) SQL 
-    END
+  END
 end
