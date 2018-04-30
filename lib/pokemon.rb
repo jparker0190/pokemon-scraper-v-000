@@ -11,6 +11,7 @@ class Pokemon
     sql = <<-SQL 
     INSERT INTO pokemon (name, type) VALUES (?,?)
     SQL
+    
   end
   def self.create(name:, type:)
     song = Song.new(name, type)
