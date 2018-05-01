@@ -10,10 +10,11 @@ class Pokemon
     db.execute("INSERT INTO pokemon (name, type) VALUES (?,?)", name, type)
   end
   def self.new_from_db(row)
-    new_pi - self.new
+    new_pi = self.new
     new_pi.id = row[0]
     new_pi.name = row[1]
     new_pi.type = row[2]
+    
   end
   def self.find(id, db)
     db.execute("SELECT * FROM pokemon where id = ? LIMIT 1", id)
