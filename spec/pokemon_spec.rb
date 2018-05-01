@@ -65,7 +65,7 @@ describe "Pokemon" do
       expect(Pokemon.find(1, @db).hp).to eq(59)
     end
 
-    # Now we alter Magikarp's hp
+     Now we alter Magikarp's hp
     xit "alters Magikarp's hp" do
       magikarp.alter_hp(0, @db)
       expect(Pokemon.find(2, @db).hp).to eq(0)
