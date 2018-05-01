@@ -16,5 +16,6 @@ class Pokemon
     type = db.execute("SELECT type FROM pokemon WHERE id = ?", id).flatten[0]
     pokemond = {id: id, name: name, type: type, db: db}
     newoke = Pokemon.new(pokemond)
+    retrun newoke
   end
 end
