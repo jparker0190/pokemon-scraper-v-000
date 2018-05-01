@@ -40,7 +40,7 @@ describe "Pokemon" do
     end
   end
 
-=begin  describe "BONUS" do
+  describe "BONUS" do
 
     before do
       @sql_runner.execute_create_hp_column
@@ -72,5 +72,4 @@ describe "Pokemon" do
     end
   end
 end
-=end
 
