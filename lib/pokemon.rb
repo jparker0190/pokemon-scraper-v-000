@@ -14,6 +14,7 @@ class Pokemon
     new_polk.id = row[0]
     new_polk.name = row[1]
     new_polk.type = row[2]
+    new_polk
   def self.find(id, db)
     db.execute("SELECT * FROM pokemon where id = ? LIMIT 1", id)
   end
