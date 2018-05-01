@@ -17,6 +17,7 @@ class Pokemon
     new_pi
   end
   def self.find(id, db)
-    pokemon = db.execute("SELECT * FROM pokemon where id = #{id}")
+    pokemon = db.execute("SELECT * FROM pokemon where id = #{id} LIMIT 1")
+    return pokemon
   end
 end
