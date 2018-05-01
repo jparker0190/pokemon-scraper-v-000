@@ -16,7 +16,12 @@ class Pokemon
     new_pi.type = row[2]
     new_pi
   end
-  def self.find(id, db)
-    db.execute("SELECT * FROM pokemon where id = ? LIMIT 1", id)
+  def self.find(id)
+    sql = <<-SQL
+    SELECT * FROM pokemon where id = ? LIMIT 1
+    SQL
+    DB[:conn].execute(sql,id).map do |row|
+      self.new_from_db(row)
+    end.first
   end
 end
