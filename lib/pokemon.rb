@@ -12,7 +12,7 @@ class Pokemon
     db.execute("INSERT INTO pokemon (name, type) VALUES (?,?)", name, type)
   end
   def self.find(id, db)
-    pokemon = db.execute("SELECT * FROM pokemon where id = ? LIMIT 1", name)
-    return pokemon
+    db.execute("SELECT * FROM pokemon where id = ? LIMIT 1", name)
+    
   end
 end
